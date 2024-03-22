@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html,
+body {
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    display: grid;
+    grid-template-rows: 60px;
+    grid-template-columns: 50% 10% 10% 10% 10% 10%;
+    align-items: center;
+    justify-items: center;
+    padding: 10px 20px;
+}
+
+.nav h1 {
+    justify-self: start;
+    color: blueviolet;
+    text-shadow: 5px 5px 20px rgb(44, 23, 228);
+    border-radius: 15px;
+}
+
+
+.nav>a {
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.nav a:hover {
+    color: blueviolet;
+    cursor: pointer;
+    text-shadow: 5px 5px 20px #fff;
+}
+
+.intro {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    padding: 200px;
+
+}
+
+.vid>video {
+    box-sizing: border-box;
+    height: 60vh;
+    border-radius: 70px;
+    box-shadow: 4px 4px 3px 3px rgba(255, 255, 255, 0.293);
+    transition-duration: 0.5s;
+}
+
+.vid>video:hover {
+
+    height: 62vh;
+    cursor: pointer;
+}
+
+.intro>.details {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    width: 400px;
+    font-size: 25px;
+}
+
+/* Media queries for tablets */
+@media (max-width: 768px) {
+    .nav {
+        grid-template-columns: 70% 30%;
+        font-size: 20px;
+    }
+
+    .intro {
+        flex-direction: column;
+        padding: 100px;
+    }
+
+    .intro>.details,
+    .vid>video {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 480px) {
+    .nav {
+        grid-template-columns: 100%;
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+
+    .nav h1 {
+        font-size: 20px;
+    }
+
+    .intro {
+        padding: 50px;
+    }
+
+    .intro>.details {
+        font-size: 18px;
+    }
+}
